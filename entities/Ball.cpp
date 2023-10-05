@@ -46,3 +46,7 @@ void Ball::Reset() {
     speedY = 0;
     radius = ballRadius;
 }
+
+void Ball::CheckCollision(Rectangle rect) {
+    if (CheckCollisionCircleRec(Vector2{x, y}, radius, rect)) speedX *= -1;
+}

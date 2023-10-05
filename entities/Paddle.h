@@ -29,6 +29,7 @@ class Paddle {
         // Getters
         float getY();
         int getSpeedY();
+        Rectangle toRect();
 
         // Methods
         void Draw();

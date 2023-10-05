@@ -37,6 +37,10 @@ int main() {
         player.Update();
         cpu.Update(ball.getY());
 
+        // Checking for collisions
+        ball.CheckCollision(player.toRect());
+        ball.CheckCollision(cpu.toRect());
+
         // Drawing
         BeginDrawing();
         ClearBackground(BLACK);

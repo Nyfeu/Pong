@@ -35,6 +35,7 @@ class Ball {
         void Draw();
         void Update();
         void Reset();
+        void CheckCollision(Rectangle rect);
 
 };
 

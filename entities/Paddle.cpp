@@ -31,3 +31,7 @@ void Paddle::detectingLimits() {
     if ((y + height) >= GetScreenHeight()) y = GetScreenHeight() - height;
     if (y < 0) y = 0;
 }
+
+Rectangle Paddle::toRect() {
+    return Rectangle{x,y, (float) width, (float) height};
+}
