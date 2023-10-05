@@ -7,8 +7,8 @@
 Ball::Ball() {
     x = screen_width/2;
     y = screen_height/2;
-    speedX = 0;
-    speedY = 0;
+    speedX = ballSpeedX;
+    speedY = ballSpeedY;
     radius = ballRadius;
 }
 

@@ -12,8 +12,20 @@ const int screen_height = 800;
 
 const int ballRadius = 20;
 
+// Defining the paddle dimensions
+
+const int rectangleWidth = 25;
+const int rectangleHeigth = 120;
+
+// Initial speeds
+
+const int ballSpeedX = 5;
+const int ballSpeedY = 10;
+const int paddleSpeedY = 20;
+
 // Defining the colors of the elements
 
 const Color ballColor = WHITE;
+const Color paddleColor = WHITE;
 
 #endif // INCLUDED_CONSTANTS_H

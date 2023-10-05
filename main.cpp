@@ -2,7 +2,7 @@
 #include <raylib.h>
 #include "constants.h"
 #include "entities/Ball.h"
-
+#include "entities/Paddle.h"
 
 using namespace std;
 
@@ -21,15 +21,20 @@ int main() {
     // Creating the Ball object
 
     Ball ball;
-    ball.setSpeedX(5);
-    ball.setSpeedY(10);
+
+    // Creating the paddles
+
+    Paddle player(10);
+    Paddle cpu(screen_width - 35);
 
     // Game Loop
 
     while ( WindowShouldClose() == false ) {
 
-        
+        // Updating elements
         ball.Update();
+        player.Update();
+        cpu.Update();
 
         // Drawing
         BeginDrawing();
@@ -42,8 +47,8 @@ int main() {
         ball.Draw();
 
         // Drawing the paddles
-        DrawRectangle(10, screen_height/2 - 120/2, 25 ,120, WHITE);
-        DrawRectangle(screen_width - 35, screen_height/2 - 120/2, 25 ,120, WHITE);
+        player.Draw();
+        cpu.Draw();
 
         EndDrawing();
     }
