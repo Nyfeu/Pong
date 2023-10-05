@@ -3,6 +3,7 @@
 #include "constants.h"
 #include "entities/Ball.h"
 #include "entities/PlayerPaddle.h"
+#include "entities/CpuPaddle.h"
 
 using namespace std;
 
@@ -25,7 +26,7 @@ int main() {
     // Creating the paddles
 
     PlayerPaddle player(10);
-    PlayerPaddle cpu(screen_width - 35);
+    CpuPaddle cpu(screen_width - 35);
 
     // Game Loop
 
@@ -34,7 +35,7 @@ int main() {
         // Updating elements
         ball.Update();
         player.Update();
-        cpu.Update();
+        cpu.Update(ball.getY());
 
         // Drawing
         BeginDrawing();

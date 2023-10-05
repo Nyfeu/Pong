@@ -14,6 +14,9 @@ class Paddle {
         // Rectangle dimensions
         int width, height;
 
+        // Detecting limits
+        void detectingLimits();
+
     public:
 
         // Constructors
@@ -29,7 +32,6 @@ class Paddle {
 
         // Methods
         void Draw();
-        virtual void Update();
 
 };
 
