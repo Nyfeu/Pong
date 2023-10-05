@@ -4,12 +4,10 @@
 
 // Constructors
 
-Ball::Ball() {
-    x = screen_width/2;
-    y = screen_height/2;
-    speedX = ballSpeedX;
-    speedY = ballSpeedY;
-    radius = ballRadius;
+Ball::Ball() { 
+    playerScore = 0;
+    cpuScore = 0;
+    InitialCondition(); 
 }
 
 // Setters
@@ -25,8 +23,11 @@ float Ball::getX() { return x; }
 float Ball::getY() { return y; }
 int Ball::getSpeedX() { return speedX; }
 int Ball::getSpeedY() { return speedY; }
+int Ball::getPlayerScore() { return playerScore; }
+int Ball::getCpuScore() { return cpuScore; }
 
 // Methods
+
 void Ball::Draw() {
     DrawCircle(x, y, 20, ballColor);
 }
@@ -35,18 +36,27 @@ void Ball::Update() {
     x += speedX;
     y += speedY;
 
-    if (x + radius >= GetScreenWidth() || x - radius <= 0) speedX *= -1;
+    if (x + radius >= GetScreenWidth()) {
+        playerPosition?cpuScore += 1:playerScore+=1;
+        Reset();
+    }
+    if (x - radius <= 0) {
+        playerPosition?playerScore+=1:cpuScore += 1;
+        Reset();
+    }
     if (y + radius >= GetScreenHeight() || y - radius <= 0) speedY *= -1;
 }
 
-void Ball::Reset() {
-    x = GetScreenWidth()/2;
-    y = GetScreenHeight()/2;
-    speedX = 0;
-    speedY = 0;
-    radius = ballRadius;
-}
+void Ball::Reset() { InitialCondition(); }
 
 void Ball::CheckCollision(Rectangle rect) {
     if (CheckCollisionCircleRec(Vector2{x, y}, radius, rect)) speedX *= -1;
+}
+
+void Ball::InitialCondition() {
+    x = screen_width/2;
+    y = screen_height/2;
+    speedX = ballSpeedX;
+    speedY = ballSpeedY;
+    radius = ballRadius;
 }

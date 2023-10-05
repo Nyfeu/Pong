@@ -25,8 +25,8 @@ int main() {
 
     // Creating the paddles
 
-    PlayerPaddle player(10);
-    CpuPaddle cpu(screen_width - 35);
+    PlayerPaddle player(playerPosition?screen_width - 35:10);
+    CpuPaddle cpu(playerPosition?10:screen_width - 35);
 
     // Game Loop
 
@@ -54,6 +54,10 @@ int main() {
         // Drawing the paddles
         player.Draw();
         cpu.Draw();
+
+        // Score Text
+        DrawText(TextFormat("%i",playerPosition?ball.getCpuScore():ball.getPlayerScore()), screen_width/4 -20, 20, 80, textColor);
+        DrawText(TextFormat("%i",playerPosition?ball.getPlayerScore():ball.getCpuScore()), 3 * screen_width/4 -20, 20, 80, textColor);
 
         EndDrawing();
     }

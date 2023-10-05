@@ -14,6 +14,9 @@ class Ball {
         // Radius
         int radius;
 
+        // Score
+        int playerScore, cpuScore;
+
     public:
 
         // Constructors
@@ -30,11 +33,14 @@ class Ball {
         float getY();
         int getSpeedX();
         int getSpeedY();
+        int getPlayerScore();
+        int getCpuScore();
 
         // Methods
         void Draw();
         void Update();
         void Reset();
+        void InitialCondition();
         void CheckCollision(Rectangle rect);
 
 };

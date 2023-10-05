@@ -3,6 +3,11 @@
 
 #include <raylib.h>
 
+// Defining positions
+
+#define RIGHT 1
+#define LEFT 0
+
 // Defining the window dimensions
 
 const int screen_width = 1200;
@@ -17,6 +22,10 @@ const int ballRadius = 20;
 const int rectangleWidth = 25;
 const int rectangleHeigth = 120;
 
+// Player position
+
+const int playerPosition = LEFT;
+
 // Initial speeds
 
 const int ballSpeedX = 10;
@@ -27,5 +36,6 @@ const int paddleSpeedY = 20;
 
 const Color ballColor = WHITE;
 const Color paddleColor = WHITE;
+const Color textColor = WHITE;
 
 #endif // INCLUDED_CONSTANTS_H
