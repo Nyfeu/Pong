@@ -43,10 +43,12 @@ int main() {
 
         // Drawing
         BeginDrawing();
-        ClearBackground(BLACK);
+        ClearBackground(backgroundColor);
 
         // Drawing the center line
         DrawLine(screen_width/2,0,screen_width/2,screen_height,WHITE);
+        DrawRectangle(screen_width/2,0,screen_width/2, screen_height, green);
+        DrawCircle(screen_width/2, screen_height/2, 150, lightGreen);
 
         // Drawing the ball
         ball.Draw();
