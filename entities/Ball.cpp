@@ -59,4 +59,9 @@ void Ball::InitialCondition() {
     speedX = ballSpeedX;
     speedY = ballSpeedY;
     radius = ballRadius;
+
+    // Random direction
+    int speedChoices[2] = {-1,1};
+    speedX *= speedChoices[GetRandomValue(0,1)];
+    speedY *= speedChoices[GetRandomValue(0,1)];
 }
