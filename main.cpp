@@ -21,11 +21,19 @@ int main() {
     // Creating the Ball object
 
     Ball ball;
+    ball.setSpeedX(5);
+    ball.setSpeedY(10);
 
     // Game Loop
 
     while ( WindowShouldClose() == false ) {
+
+        
+        ball.Update();
+
+        // Drawing
         BeginDrawing();
+        ClearBackground(BLACK);
 
         // Drawing the center line
         DrawLine(screen_width/2,0,screen_width/2,screen_height,WHITE);

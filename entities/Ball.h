@@ -33,6 +33,8 @@ class Ball {
 
         // Methods
         void Draw();
+        void Update();
+        void Reset();
 
 };
 
