@@ -3,7 +3,7 @@
 
 class Paddle {
 
-    private:
+    protected:
 
         // Position
         float x, y;
@@ -29,8 +29,7 @@ class Paddle {
 
         // Methods
         void Draw();
-        void Update();
-
+        virtual void Update();
 
 };
 

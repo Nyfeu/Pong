@@ -20,7 +20,7 @@ const int rectangleHeigth = 120;
 // Initial speeds
 
 const int ballSpeedX = 5;
-const int ballSpeedY = 10;
+const int ballSpeedY = 5;
 const int paddleSpeedY = 20;
 
 // Defining the colors of the elements

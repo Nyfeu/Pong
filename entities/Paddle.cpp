@@ -26,4 +26,28 @@ void Paddle::Draw() {
     DrawRectangle(x, y, width, height, paddleColor);
 }
 
-void Paddle::Update() {}
+void Paddle::Update() {
+
+    // Detecting events
+    if (IsKeyDown(KEY_DOWN)) y += speedY;
+    if (IsKeyDown(KEY_UP)) y -= speedY;
+
+    // Detecting colisions
+    if ((y + height) >= GetScreenHeight()) y = GetScreenHeight() - height;
+    if (y < 0) y = 0;
+    
+}
+
+/*void PlayerPaddle::Update() {
+
+    // Detecting events
+    if (IsKeyDown(KEY_DOWN)) y += speedY;
+    if (IsKeyDown(KEY_UP)) y -= speedY;
+
+    // Detecting colisions
+    if ((y + height) >= GetScreenHeight()) y = GetScreenHeight() - height;
+    if (y < 0) y = 0;
+
+}
+
+void CpuPaddle::Update() {}*/

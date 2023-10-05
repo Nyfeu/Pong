@@ -2,7 +2,7 @@
 #include <raylib.h>
 #include "constants.h"
 #include "entities/Ball.h"
-#include "entities/Paddle.h"
+#include "entities/PlayerPaddle.h"
 
 using namespace std;
 
@@ -24,8 +24,8 @@ int main() {
 
     // Creating the paddles
 
-    Paddle player(10);
-    Paddle cpu(screen_width - 35);
+    PlayerPaddle player(10);
+    PlayerPaddle cpu(screen_width - 35);
 
     // Game Loop
 
