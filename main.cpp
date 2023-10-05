@@ -1,16 +1,14 @@
 #include <iostream>
 #include <raylib.h>
+#include "constants.h"
+#include "entities/Ball.h"
+
 
 using namespace std;
 
 int main() {
 
     cout << "Starting the game..." << endl;
-
-    // Defining the window dimensions
-
-	const int screen_width = 1200;
-	const int screen_height = 800;
 	
     // Initializing the window
 
@@ -20,27 +18,31 @@ int main() {
 
     SetTargetFPS(60);
 
+    // Creating the Ball object
+
+    Ball ball;
+
     // Game Loop
 
-	while ( WindowShouldClose() == false ) {
+    while ( WindowShouldClose() == false ) {
         BeginDrawing();
 
+        // Drawing the center line
+        DrawLine(screen_width/2,0,screen_width/2,screen_height,WHITE);
+
         // Drawing the ball
-        DrawCircle(screen_width/2, screen_height/2, 20, WHITE);
+        ball.Draw();
 
         // Drawing the paddles
         DrawRectangle(10, screen_height/2 - 120/2, 25 ,120, WHITE);
         DrawRectangle(screen_width - 35, screen_height/2 - 120/2, 25 ,120, WHITE);
 
-        // Drawing the center line
-        DrawLine(screen_width/2,0,screen_width/2,screen_height,WHITE);
-
         EndDrawing();
     }
 
-	// Closing the window
+    // Closing the window
 
-	CloseWindow();
+    CloseWindow();
 
     return 0;
 }

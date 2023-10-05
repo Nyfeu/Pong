@@ -8,10 +8,10 @@ CXX = g++
 FLAGS = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 
 # Lista de arquivos fonte
-SOURCES = $(wildcard *.cpp)
+SOURCES = $(wildcard ./entities/*.cpp) $(wildcard *.cpp)
 
 # Lista de arquivos de cabeçalho
-HEADERS = $(wildcard *.h)
+HEADERS = $(wildcard ./entities/*.h) $(wildcard *.h)
 
 # Lista de arquivos objeto gerados
 OBJS = $(SOURCES:.cpp=.o)
