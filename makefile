@@ -28,6 +28,9 @@ HEADERS = $(wildcard $(SRC_DIR)/*.h)
 # Lista de arquivos objeto gerados
 OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SOURCES))
 
+# Regra para criar diretórios bin e build, se não existirem
+$(shell mkdir -p $(dir $(TARGET)) $(BUILD_DIR))
+
 # Regra padrão
 all: $(TARGET)
 
@@ -42,3 +45,7 @@ $(TARGET): $(OBJS)
 # Limpar arquivos gerados (intermediários e executável)
 clean:
 	rm -f $(OBJS) $(TARGET)
+
+# Rodar o aplicativo
+run:
+	./bin/launch
