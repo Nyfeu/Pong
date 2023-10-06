@@ -1,6 +1,6 @@
 #include <raylib.h>
 #include "Paddle.h"
-#include "../constants.h"
+#include "constants.h"
 
 Paddle::Paddle(int xv) {
     x = xv;
@@ -23,7 +23,7 @@ int Paddle::getSpeedY() { return speedY; }
 // Methods
 
 void Paddle::Draw() {
-    DrawRectangle(x, y, width, height, paddleColor);
+    DrawRectangleRounded(Rectangle{x, y, (float) width, (float) height}, 0.8, 0, paddleColor);
 }
 
 void Paddle::detectingLimits() {

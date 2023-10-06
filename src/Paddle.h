@@ -1,6 +1,8 @@
 #ifndef INCLUDED_PADDLE_H
 #define INCLUDED_PADDLE_H
 
+#include <raylib.h>
+
 class Paddle {
 
     protected:

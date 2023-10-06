@@ -1,6 +1,6 @@
 #include <raylib.h>
 #include "CpuPaddle.h"
-#include "../constants.h"
+#include "constants.h"
 
 void CpuPaddle::Update(float ballY) {
 

@@ -1,9 +1,9 @@
 #include <iostream>
 #include <raylib.h>
 #include "constants.h"
-#include "entities/Ball.h"
-#include "entities/PlayerPaddle.h"
-#include "entities/CpuPaddle.h"
+#include "Ball.h"
+#include "PlayerPaddle.h"
+#include "CpuPaddle.h"
 
 using namespace std;
 
