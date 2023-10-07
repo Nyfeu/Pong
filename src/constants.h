@@ -8,12 +8,14 @@
 #define RIGHT 1165
 #define LEFT 10
 
-// Creating colors
+// Defining the colors of the elements
 
-const Color green = Color{38, 185, 154, 255};
-const Color darkGreen = Color{20, 160, 133, 255};
-const Color lightGreen = Color{129, 204, 184, 255};
-const Color yellow = Color{243, 213, 91, 255};
+const Color paddleColor = WHITE;
+const Color textColor = WHITE;
+const Color rightSideColor = Color{38, 185, 154, 255};
+const Color leftSideColor = Color{20, 160, 133, 255};
+const Color centerColor = Color{129, 204, 184, 255};
+const Color ballColor = Color{243, 213, 91, 255};
 
 // Defining the window dimensions
 
@@ -38,12 +40,5 @@ const int playerPosition = LEFT;
 const int ballSpeedX = 10;
 const int ballSpeedY = 10;
 const int paddleSpeed = 20;
-
-// Defining the colors of the elements
-
-const Color ballColor = yellow;
-const Color paddleColor = WHITE;
-const Color textColor = WHITE;
-const Color backgroundColor = darkGreen;
 
 #endif // INCLUDED_CONSTANTS_H
