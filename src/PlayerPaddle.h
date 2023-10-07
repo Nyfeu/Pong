@@ -7,7 +7,7 @@ class PlayerPaddle : public Paddle {
 
     public:
         using Paddle::Paddle;
-        void Update();
+        void Update() override;
 
 };
 

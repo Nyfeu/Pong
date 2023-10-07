@@ -14,19 +14,23 @@ class Ball {
         // Radius
         int radius;
 
-        // Score
-        int playerScore, cpuScore;
+        // Color of the ball
+        Color color;
+
+        // Game infos
+        int playerScore, cpuScore, playerPosition;
 
     public:
 
         // Constructors
-        Ball();
+        Ball(int speedX, int speedY, int radius, Color color);
 
         // Setters
         void setX(int value);
         void setY(int value);
         void setSpeedX(int value);
         void setSpeedY(int value);
+        void setPlayerPosition(int playerPosition);
 
         // Getters
         float getX();

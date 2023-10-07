@@ -5,8 +5,8 @@
 
 // Defining positions
 
-#define RIGHT 1
-#define LEFT 0
+#define RIGHT 1165
+#define LEFT 10
 
 // Creating colors
 
@@ -37,7 +37,7 @@ const int playerPosition = LEFT;
 
 const int ballSpeedX = 10;
 const int ballSpeedY = 10;
-const int paddleSpeedY = 20;
+const int paddleSpeed = 20;
 
 // Defining the colors of the elements
 

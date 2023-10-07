@@ -1,18 +1,18 @@
 #include <raylib.h>
 #include "Paddle.h"
-#include "constants.h"
 
-Paddle::Paddle(int xv) {
-    x = xv;
-    y = GetScreenHeight()/2 - rectangleHeigth/2;
-    speedY = paddleSpeedY;
-    width = rectangleWidth;
-    height = rectangleHeigth;
+Paddle::Paddle(int position, int width, int height, int speed, Color color) {
+    x = position;
+    y = GetScreenHeight()/2 - height/2;
+    speedY = speed;
+    Paddle::width = width;
+    Paddle::height = height;
+    Paddle::color = color;
 }
 
 // Setters
 
-void Paddle::setY(int value) { y = value; }
+void Paddle::setY(float value) { y = value; }
 void Paddle::setSpeedY(int value) { speedY = value; }
 
 // Getters
@@ -23,7 +23,7 @@ int Paddle::getSpeedY() { return speedY; }
 // Methods
 
 void Paddle::Draw() {
-    DrawRectangleRounded(Rectangle{x, y, (float) width, (float) height}, 0.8, 0, paddleColor);
+    DrawRectangleRounded(Rectangle{x, y, (float) width, (float) height}, 0.8, 0, color);
 }
 
 void Paddle::detectingLimits() {

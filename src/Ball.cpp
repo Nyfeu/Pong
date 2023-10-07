@@ -1,12 +1,15 @@
 #include <raylib.h>
 #include "Ball.h"
-#include "constants.h"
 
 // Constructors
 
-Ball::Ball() { 
+Ball::Ball(int speedX, int speedY, int radius, Color color) { 
     playerScore = 0;
     cpuScore = 0;
+    Ball::speedX = speedX;
+    Ball::speedY = speedY;
+    Ball::radius = radius;
+    Ball::color = color;
     InitialCondition(); 
 }
 
@@ -16,6 +19,7 @@ void Ball::setX(int value) { x = value; }
 void Ball::setY(int value) { y = value; }
 void Ball::setSpeedX(int value) { speedX = value; }
 void Ball::setSpeedY(int value) { speedY = value; }
+void Ball::setPlayerPosition(int playerPosition) { Ball::playerPosition = playerPosition; }
 
 // Getters
 
@@ -29,7 +33,7 @@ int Ball::getCpuScore() { return cpuScore; }
 // Methods
 
 void Ball::Draw() {
-    DrawCircle(x, y, 20, ballColor);
+    DrawCircle(x, y, 20, color);
 }
 
 void Ball::Update() {
@@ -54,14 +58,14 @@ void Ball::CheckCollision(Rectangle rect) {
 }
 
 void Ball::InitialCondition() {
-    x = screen_width/2;
-    y = screen_height/2;
-    speedX = ballSpeedX;
-    speedY = ballSpeedY;
-    radius = ballRadius;
+    
+    // Centering the ball
+    x = GetScreenWidth()/2;
+    y = GetScreenHeight()/2;
 
     // Random direction
     int speedChoices[2] = {-1,1};
     speedX *= speedChoices[GetRandomValue(0,1)];
     speedY *= speedChoices[GetRandomValue(0,1)];
+
 }

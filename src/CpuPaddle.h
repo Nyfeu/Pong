@@ -5,9 +5,13 @@
 
 class CpuPaddle : public Paddle {
 
+    private:
+        float ballPosition;
+
     public:
         using Paddle::Paddle;
-        void Update(float ballY);
+        void setBallPosition(float ballY);
+        void Update() override;
 
 };
 

@@ -21,21 +21,30 @@ int main() {
 
     // Creating the Ball object
 
-    Ball ball;
+    Ball ball(ballSpeedX,ballSpeedY,ballRadius,ballColor);
+    ball.setPlayerPosition(playerPosition);
 
-    // Creating the paddles
+    // Creating the player's paddle
 
-    PlayerPaddle player(playerPosition?screen_width - 35:10);
-    CpuPaddle cpu(playerPosition?10:screen_width - 35);
+    PlayerPaddle player(playerPosition, rectangleWidth, rectangleHeigth, paddleSpeed, paddleColor);
+
+    // Creating the cpu's paddle
+
+    float cpuPosition = playerPosition == RIGHT? LEFT: RIGHT;
+
+    CpuPaddle cpu(cpuPosition, rectangleWidth, rectangleHeigth, paddleSpeed, paddleColor);
 
     // Game Loop
 
     while ( WindowShouldClose() == false ) {
 
+        // Telling the cpu where the ball is
+        cpu.setBallPosition(ball.getY());
+
         // Updating elements
         ball.Update();
         player.Update();
-        cpu.Update(ball.getY());
+        cpu.Update();
 
         // Checking for collisions
         ball.CheckCollision(player.toRect());

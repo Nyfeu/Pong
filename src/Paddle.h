@@ -16,16 +16,19 @@ class Paddle {
         // Rectangle dimensions
         int width, height;
 
+        // Color of the paddle
+        Color color;
+
         // Detecting limits
         void detectingLimits();
 
     public:
 
         // Constructors
-        Paddle(int xv);
+        Paddle(int position, int width, int height, int speed, Color color);
 
         // Setters
-        void setY(int value);
+        void setY(float value);
         void setSpeedY(int value);
 
         // Getters
@@ -35,6 +38,7 @@ class Paddle {
 
         // Methods
         void Draw();
+        virtual void Update() = 0;
 
 };
 
