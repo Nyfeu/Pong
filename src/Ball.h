@@ -26,10 +26,10 @@ class Ball {
         Ball(int speedX, int speedY, int radius, Color color);
 
         // Setters
-        void setX(int value);
-        void setY(int value);
-        void setSpeedX(int value);
-        void setSpeedY(int value);
+        void setX(int x);
+        void setY(int y);
+        void setSpeedX(int speedX);
+        void setSpeedY(int speedY);
         void setPlayerPosition(int playerPosition);
 
         // Getters

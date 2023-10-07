@@ -28,8 +28,8 @@ class Paddle {
         Paddle(int position, int width, int height, int speed, Color color);
 
         // Setters
-        void setY(float value);
-        void setSpeedY(int value);
+        void setY(float y);
+        void setSpeedY(int speedY);
 
         // Getters
         float getY();

@@ -6,20 +6,20 @@
 Ball::Ball(int speedX, int speedY, int radius, Color color) { 
     playerScore = 0;
     cpuScore = 0;
-    Ball::speedX = speedX;
-    Ball::speedY = speedY;
-    Ball::radius = radius;
-    Ball::color = color;
+    this->speedX = speedX;
+    this->speedY = speedY;
+    this->radius = radius;
+    this->color = color;
     InitialCondition(); 
 }
 
 // Setters
 
-void Ball::setX(int value) { x = value; }
-void Ball::setY(int value) { y = value; }
-void Ball::setSpeedX(int value) { speedX = value; }
-void Ball::setSpeedY(int value) { speedY = value; }
-void Ball::setPlayerPosition(int playerPosition) { Ball::playerPosition = playerPosition; }
+void Ball::setX(int x) { this->x = x; }
+void Ball::setY(int y) { this->y = y; }
+void Ball::setSpeedX(int speedX) { this->speedX = speedX; }
+void Ball::setSpeedY(int speedY) { this->speedY = speedY; }
+void Ball::setPlayerPosition(int playerPosition) { this->playerPosition = playerPosition; }
 
 // Getters
 

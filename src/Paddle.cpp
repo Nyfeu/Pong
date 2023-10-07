@@ -5,15 +5,15 @@ Paddle::Paddle(int position, int width, int height, int speed, Color color) {
     x = position;
     y = GetScreenHeight()/2 - height/2;
     speedY = speed;
-    Paddle::width = width;
-    Paddle::height = height;
-    Paddle::color = color;
+    this->width = width;
+    this->height = height;
+    this->color = color;
 }
 
 // Setters
 
-void Paddle::setY(float value) { y = value; }
-void Paddle::setSpeedY(int value) { speedY = value; }
+void Paddle::setY(float y) { this->y = y; }
+void Paddle::setSpeedY(int speedY) { this->speedY = speedY; }
 
 // Getters
 
