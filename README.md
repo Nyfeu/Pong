@@ -1,4 +1,4 @@
-# Pont Game 🏓 (Remake) in C++
+# Pong Game 🏓 (Remake) in C++
 
 This is a remake of the classic Pong game, implemented in C++ using the [raylib](https://www.raylib.com/) library. In this version, you play against a computer-controlled opponent, trying to bounce the ball past the paddle controlled by the computer to score points.
 
