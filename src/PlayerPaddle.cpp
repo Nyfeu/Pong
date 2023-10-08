@@ -1,6 +1,5 @@
 #include <raylib.h>
 #include "PlayerPaddle.h"
-#include "constants.h"
 
 void PlayerPaddle::Update() {
 
