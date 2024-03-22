@@ -38,9 +38,6 @@ make run
 
 ## Inspiration
 
-This project was inspired by Nick's programming tutorial, available on YouTube:
-[![Nick's Tutorial](https://img.youtube.com/vi/VLJlTaFvHo4/0.jpg)](https://www.youtube.com/watch?v=VLJlTaFvHo4)
-
-Nick's video was a valuable source of knowledge and inspiration for creating this Pong game in C++.
+This project was inspired by Nick's programming tutorial, available on: [Youtube Video](https://www.youtube.com/watch?v=VLJlTaFvHo4). Nick's video was a valuable source of knowledge and inspiration for creating this Pong game in C++.
 
 ***
